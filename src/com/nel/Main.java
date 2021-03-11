@@ -1,6 +1,7 @@
 package com.nel;
 
 
+import com.nel.Algorithms.KnuthMorrisPrat;
 import com.nel.Algorithms.Naive;
 
 public class Main {
@@ -11,6 +12,7 @@ public class Main {
 	    String pattern = Workspace.getPattern();
 
         Naive.naive(text, pattern);
+        //KnuthMorrisPrat.KMPSearch(text, pattern);
 
     }
 }
