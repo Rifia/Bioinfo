@@ -1,6 +1,7 @@
 package com.nel;
 
 
+import com.nel.Algorithms.BoyerMoore;
 import com.nel.Algorithms.KnuthMorrisPrat;
 import com.nel.Algorithms.Naive;
 
@@ -11,8 +12,12 @@ public class Main {
 	    String text = Workspace.getText(fileName);
 	    String pattern = Workspace.getPattern();
 
+        System.out.println("\nNaive");
         Naive.naive(text, pattern);
-        //KnuthMorrisPrat.KMPSearch(text, pattern);
+        System.out.println("\nKnuthMorrisPrat");
+        KnuthMorrisPrat.KMPSearch(text, pattern);
+        System.out.println("\nBoyerMoore");
+        BoyerMoore.boyerMoore(text, pattern);
 
     }
 }
