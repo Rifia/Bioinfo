@@ -10,8 +10,9 @@ public class KnuthMorrisPrat {
         int [] values = new int[pattern.length()];
         for (int i = 1; i < pattern.length(); i++) {
             int j = 0;
+            // ищем паттерн внутри паттерна
             while (i + j < pattern.length() && pattern.charAt(j) == pattern.charAt(i + j)) {
-                values[i + j] = Math.max(values[i + j], j + 1);
+                values[i + j] = Math.max(values[i + j], j + 1); // максимальное из того, что там уже было или позицию совпашевго символа внутри паттерна
                 j++;
             }
         }
@@ -23,8 +24,8 @@ public class KnuthMorrisPrat {
         int[] prefixFunc = prefixFunction(pattern);
         int counter = 0;
 
-        int i = 0;
-        int j = 0;
+        int i = 0; // позиция внутри текста
+        int j = 0; //                паттерна
 
         while (i < text.length()) {
             counter++;
@@ -34,7 +35,7 @@ public class KnuthMorrisPrat {
             }
             if (j == pattern.length()) {
                 indexer.add(i - j);
-                j = prefixFunc[j - 1];
+                j = prefixFunc[j - 1]; //возвращаемся назад по префиксной функции
             } else if (i < text.length() && pattern.charAt(j) != text.charAt(i)) {
                 if (j != 0) {
                     j = prefixFunc[j - 1];

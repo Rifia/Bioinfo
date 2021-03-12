@@ -17,7 +17,7 @@ public class Main {
         System.out.println("\nKnuthMorrisPrat");
         KnuthMorrisPrat.KMPSearch(text, pattern);
         System.out.println("\nBoyerMoore");
-        BoyerMoore.boyerMoore(text, pattern);
+        BoyerMoore.Match(text, pattern);
 
     }
 }
