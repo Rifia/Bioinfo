@@ -25,4 +25,6 @@ public class Naive {
         System.out.println("Индексы совпадений: " + indexer.toString());
         System.out.println("Количество побуквенных сравнений: " + counter);
     }
+
+
 }

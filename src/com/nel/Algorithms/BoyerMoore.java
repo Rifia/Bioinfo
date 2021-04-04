@@ -2,7 +2,6 @@ package com.nel.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class BoyerMoore {
 
@@ -77,6 +76,8 @@ public class BoyerMoore {
             delta2[pattern.length() - 1 - i] = lastPrefixIndex;
         }
 
+        System.out.println("delta2(I) = " + Arrays.toString(delta2));
+
         // не доходя до последнего символа паттерна
         for (int i = 0; i < pattern.length() - 1; i++) {
             // длина суффикса - это самое длинное совпадение концов подстроки
@@ -87,6 +88,7 @@ public class BoyerMoore {
                 delta2[pattern.length() - 1 - suffixLength] = pattern.length() - 1 - i;
             }
         }
+        System.out.println("delta2(II) = " + Arrays.toString(delta2));
     }
     // как и почему изменился массив
     // получили количество символов, на которые можно сдвинуть паттерн по строке с учетом и суффиксов внутри самого паттерна

@@ -1,9 +1,7 @@
 package com.nel;
 
 
-import com.nel.Algorithms.BoyerMoore;
-import com.nel.Algorithms.KnuthMorrisPrat;
-import com.nel.Algorithms.Naive;
+import com.nel.Algorithms.*;
 
 public class Main {
 
@@ -18,6 +16,9 @@ public class Main {
         KnuthMorrisPrat.KMPSearch(text, pattern);
         System.out.println("\nBoyerMoore");
         BoyerMoore.Match(text, pattern);
-
+        System.out.println("\nKarpRabin");
+        KarpRabin.karpRabin(text, pattern, Integer.MAX_VALUE);
+        System.out.println("\nBaezaYatesGonnet");
+        BaezaYatesGonnet.BYG(text, pattern);
     }
 }
